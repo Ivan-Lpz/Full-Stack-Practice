@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="mx-auto w-50 my-3">Here are our Users!!</h1>
+    <table class="table table-dark table-striped mx-auto w-50 my-3">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Actions</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in all_users %}
+            <tr>
+                <th scope="row">{{user.id}}</th>
+                <th scope="row">{{user.first_name}}</th>
+                <th scope="row">{{user.last_name}}</th>
+                <th scope="row">{{user.email}}</th>
+                <th scope="row">{{user.created_at}}</th>
+                <th scope="row"><a href="/users/{{user.id}}">Show</a>
+                <th scope="row"><a href="#">Edit</a>
+                <th scope="row"><a href="#">Delete</a>
+                </th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

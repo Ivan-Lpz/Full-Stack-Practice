@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="mx-auto w-50 my-3">User {{single_user.id}}</h1>
+    <h2>Full Name: {{single_user.first_name}} {{single_user.last_name}}</h2>
+    <h3>Email: {{single_user.email}}</h3>
+    <h3>Created On: {{single_user.created_at}}</h3>
+    <h3>updated_at: {{single_user.updated_at}}</h3>
+    <a href="/users/{{single_user.id}}/edit">Edit</a>
+    <a href="/users/{{single_user.id}}/edit/delete">Delete</a>
+</body>
+</html>
